@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" class="metro-no-touch-device">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta property="og:url" content="https://daggy.dev/index.html">
+  <meta property="og:title" content="Daggy - Data Aggregation Utility">
+  <meta property="og:description" content="Daggy is application that can run multiple commands on remote servers simultaneously and save output locally.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://daggy.dev/images/daggy_logo.png">
+  <meta property="og:image:secure_url" content="https://daggy.dev/images/daggy_logo.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="1200">
+
+  <meta name="author" content="synacker">
+  <meta name="description" content="Daggy is application that can run multiple commands on remote servers simultaneously and save output locally.">
+  <meta name="keywords" content="ssh, bash, utility, administration, debug, developing">
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <title>Daggy - Data Aggregation Utility</title>
+
+
+  <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+  <link id="color-scheme" href="stylesheets/daggy.css" rel="stylesheet">
+  <%= stylesheet_link_tag 'site' %>
+  <%= javascript_include_tag 'site' %>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="icon" type="image/ico" href="favicon.ico">
+
+</head>
+<body>
+<div class="container-fluid pos-fixed fixed-top z-top">
+  <header class="app-bar container bg-black panel fg-control pos-relative" data-role="appbar" data-expand-point="md">
+    <a href="index.html" class="brand no-hover">
+      <span class="fg-accent">DAGGY</span>
+    </a>
+    <ul class="app-bar-menu ml-auto text-upper collapsed" style="">
+      <li>
+        <a href="index.html" class="dropdown-toggle">About</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="index.html#daggy">Daggy</a></li>
+          <li class="divider"></li>
+          <li><a href="index.html#facilities">Facilities</a></li>
+          <li><a href="index.html#features">Features</a></li>
+          <li><a href="index.html#howitworks">How Daggy works</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://docs.daggy.dev" class="dropdown-toggle">Docs</a>
+        <ul class="d-menu" data-role="dropdown">
+          <li><a href="https://docs.daggy.dev/">Common Description</a></li>
+          <li class="divider"></li>
+          <li><a href="https://docs.daggy.dev/getting-started">Getting Started</a></li>
+          <li><a href="https://docs.daggy.dev/how-it-works">How it works</a></li>
+          <li><a href="https://docs.daggy.dev/data-sources-configuration">Data Sources Configuration</a></li>
+          <li><a href="https://docs.daggy.dev/command-snippets">Command snippets</a></li>
+          <li><a href="https://docs.daggy.dev/troubleshoting">Troubleshoting</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://github.com/synacker/daggy" id="github_daggy_href" target="_blank">
+          <span class="mif-github mif-2x d-none d-block-md"></span>
+          <span class="d-block d-none-md">Github</span>
+        </a>
+      </li>
+    </ul>
+  </header>
+
+</div>
+<%= yield %>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
+
+</body>
+</html>

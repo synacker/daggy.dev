@@ -1,0 +1,21 @@
+$color-accent: #007A5C;
+
+#github_daggy_href {
+  color: $color-accent !important;
+}
+
+body {
+  padding-top: 50px;
+  opacity: 1;
+}
+
+.fg-accent {
+  color: $color-accent;
+}
+
+ul .d-menu {
+  li {
+    background-color: black;
+    color: white;
+  }
+}
