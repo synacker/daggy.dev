@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+<url>
+  <loc>http://daggy.dev/</loc>
+  <lastmod><%= last_update_time('source/index.html.erb').iso8601 %></lastmod>
+  <image:image>
+    <image:loc>https://daggy.dev/images/daggy_logo.svg</image:loc>
+    <image:title><%= data.general.title %>></image:title>
+    <image:caption><%= data.general.description %>></image:caption>
+    <image:license>MIT</image:license>
+  </image:image>
+  <image:image>
+    <image:loc>https://daggy.dev/images/daggy_logo.png</image:loc>
+    <image:title><%= data.general.title %>></image:title>
+    <image:caption><%= data.general.description %>></image:caption>
+    <image:license>MIT</image:license>
+  </image:image>
+  <image:image>
+    <image:loc>https://daggy.dev/images/daggy_social.png</image:loc>
+    <image:title><%= data.general.title %>></image:title>
+    <image:caption><%= data.general.description %>></image:caption>
+    <image:license>MIT</image:license>
+  </image:image>
+  <image:image>
+    <image:loc>https://daggy.dev/images/daggy_scheme.svg</image:loc>
+    <image:title><%= data.general.images.how_daggy_works %></image:title>
+    <image:caption>Short description how daggy works</image:caption>
+    <image:license>MIT</image:license>
+  </image:image>
+  <image:image>
+    <image:loc>https://daggy.dev/images/daggy_example.png</image:loc>
+    <image:title><%= data.general.images.data_source_example %></image:title>
+    <image:caption>Simple example with Daggy data source config</image:caption>
+    <image:license>MIT</image:license>
+  </image:image>
+</url>
+</urlset>

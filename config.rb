@@ -73,3 +73,9 @@ configure :build do
       ]
   }
 end
+
+helpers do
+  def last_update_time(file)
+    Time.parse `git log -1 --format=%cd #{file} 2>/dev/null`
+  end
+end

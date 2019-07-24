@@ -1,2 +1,6 @@
 title: Daggy - Data Aggregation Utility
 description: Open source, free, cross-platform, server-less and useful utility for aggregation data from your network
+
+images:
+  how_daggy_works: How Daggy works
+  data_source_example: Daggy data source example
