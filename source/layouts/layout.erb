@@ -4,19 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+  <meta name="twitter:site" content="@synacker">
+  <meta name="twitter:creator" content="@synacker">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content=<%= data.general.title %>>
+  <meta name="twitter:description" content=<%= data.general.description %>>
+  <meta name="twitter:image" content="https://daggy.dev/images/daggy_social.png">
+
   <meta property="og:url" content="https://daggy.dev/index.html">
-  <meta property="og:title" content="Daggy - Data Aggregation Utility">
-  <meta property="og:description" content="Daggy is application that can run multiple commands on remote servers simultaneously and save output locally.">
+  <meta property="og:title" content=<%= data.general.title %>>
+  <meta property="og:description" content=<%= data.general.description %>>
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://daggy.dev/images/daggy_logo.png">
-  <meta property="og:image:secure_url" content="https://daggy.dev/images/daggy_logo.png">
+  <meta property="og:image" content="https://daggy.dev/images/daggy_social.png">
+  <meta property="og:image:secure_url" content="https://daggy.dev/images/daggy_social.png">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="1200">
+  <meta property="og:image:width" content="1280">
+  <meta property="og:image:height" content="640">
 
   <meta name="author" content="synacker">
-  <meta name="description" content="Daggy is application that can run multiple commands on remote servers simultaneously and save output locally.">
-  <meta name="keywords" content="ssh, bash, utility, administration, debug, developing">
+  <meta name="description" content=<%= data.general.description %>>
+  <meta name="keywords" content="open source, server-less, serverless, free, cross-platform, crossplatform, ssh, bash, utility, administration, debug, developing, network, microservice">
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -38,7 +45,16 @@
   <link rel="shortcut icon" href="favicon.png">
   <link rel="icon" type="image/ico" href="favicon.ico">
 
-  <%= google_analytics_tag %>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144466701-1"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-144466701-1');
+  </script>
+
 
   <!-- Yandex.Metrika counter -->
   <script type="text/javascript" >
