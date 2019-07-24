@@ -72,10 +72,4 @@ configure :build do
           {icon: "mstile-310x150.png", size: "310x150"}
       ]
   }
-
-  activate :google_analytics do |ga|
-    ga.tracking_id = 'UA-144466701-1'
-    ga.domain_name = 'daggy.dev'
-  end
-
 end
