@@ -3,10 +3,15 @@
 new ClipboardJS('.copy-button');
 
 var OSName = 'unknown';
-if (navigator.appVersion.indexOf("Win") != -1) OSName = 'windows';
-if (navigator.appVersion.indexOf("Mac") != -1) OSName = 'macos';
-if (navigator.appVersion.indexOf("X11") != -1) OSName = 'linux';
-if (navigator.appVersion.indexOf("Linux") != -1) OSName = 'Linux';
+if (navigator.appVersion.indexOf("Win") != -1) {
+    OSName = 'windows';
+} else if (navigator.appVersion.indexOf("Mac") != -1) {
+    OSName = 'macos';
+} else if (navigator.appVersion.indexOf("X11") != -1) {
+    OSName = 'linux';
+} else if (navigator.appVersion.indexOf("Linux") != -1) {
+    OSName = 'linux';
+}
 
 switch (OSName) {
     case 'unknown':
