@@ -20,7 +20,14 @@ ul .d-menu {
   }
 }
 
-.humburger .line {
-  color: $color-accent;
-  background-color: $color-accent;
+#windows_install {
+  border-width: 0px;
+
+  li {
+    border-width: 0px;
+  }
+}
+#install_content {
+  margin-top: 112px;
+  min-width: 400px;
 }

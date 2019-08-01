@@ -4,116 +4,198 @@ title: About
 
 
 <div class="hero hero-bg text-center" id="daggy">
-  <img src="images/daggy_logo.svg" height="250px">
+  <img src="images/daggy_logo.svg" height="200px">
   <div class="display4 fg-white"><span class="reduce-3 enlarge-3-md">DAGGY</span></div>
 
   <h4 class="text-center fg-white text-upper text-light">Data Aggregation Utility<span class="d-none-md1"><br></span>
   </h4>
   <h5><%= data.general.description %></h5>
+  <p class="fg-white">Download and install v<span class="version-number text-bold">1.1.3</span></p>
+  <div class="d-flex flex-justify-center">
+    <ul id="install_buttons" class="app-bar-present pos-absolute no-border bg-black cell-6 offset-3"
+        data-fixed-tabs="true"
+        data-role="materialtabs"
+        data-cls-marker="bg-transparent">
+      <li id="windows_tab">
+        <a class="bg-black" href="#install_windows"><span class="mif-windows mif-5x fg-accent"></span></a>
+      </li>
+      <li id="linux_tab">
+        <a class="bg-black" href="#install_linux"><span class="mif-linux mif-5x fg-accent"></span></a>
+      </li>
+      <li id="macos_tab">
+        <a class="bg-black" href="#install_macos"><span class="mif-apple mif-5x fg-accent"></span></a>
+      </li>
+    </ul>
+    <div id="install_content" class="p-5">
+      <div class="fg-white" id="install_windows">
+        <ul id="windows_install" class="group-list horizontal">
+          <li>
+            <a href="https://github.com/synacker/daggy/releases/download/1.1.3/daggy_install_win64.exe" class="command-button fg-white" download>
+              <span class="mif-download icon"></span>
+              <span class="caption">
+                  Daggy Installer
+                  <small>Windows x64</small>
+                </span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/synacker/daggy/releases/download/1.1.3/daggy_portable_win64.zip" class="command-button fg-white" download>
+              <span class="mif-download icon"></span>
+              <span class="caption">
+                  Daggy Portable
+                  <small>Windows x64</small>
+                </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="fg-white" id="install_linux">
+        <div data-role="accordion" data-one-frame="true" data-show-active="true">
+          <div class="frame">
+            <div class="heading">Fedora 29/30/31</div>
+            <div class="content p-5">
+              <button class="button square rounded copy-button" data-clipboard-target="#fedora_install" title="Copy">
+                <span class="mif-copy"></span>
+              </button>
+              <code id="fedora_install" class="bg-black">
+                sudo dnf install daggy
+              </code>
+            </div>
+          </div>
+          <div class="frame">
+            <div class="heading">Arch Linux</div>
+            <div class="content p-5">
+              <button class="button square rounded copy-button" data-clipboard-target="#arch_install" title="Copy">
+                <span class="mif-copy"></span>
+              </button>
+              <code id="arch_install" class="bg-black">
+                yay daggy
+              </code>
+            </div>
+          </div>
+          <div class="frame">
+            <div class="heading">Build from source</div>
+            <div class="content p-5">
+              <a href="https://docs.daggy.dev/getting-started#build-instractions" class="command-button fg-white">
+                <span class="mif-help icon"></span>
+                <span class="caption">
+                  Read build instruction
+                  <small>Compile Daggy from source</small>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fg-white cell-12" id="install_macos">
+        <button class="button square rounded copy-button" data-clipboard-target="#brew_install" title="Copy">
+          <span class="mif-copy"></span>
+        </button>
+        <code id="brew_install" class="bg-black">
+          brew install https://github.com/synacker/daggy_homebrew/blob/master/daggy.rb
+        </code>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-left pt-10 pb-20">
+    <div class="container">
+      <div data-role="carousel"
+           data-cls-controls="fg-white"
+           data-cls-bullet="bullet-big bg-black"
+           data-bullets-style="circle"
+           data-cls-bullet-on="bg-control drop-shadow"
+           data-cls-slides="rounded"
+           data-control-next="<span class='mif-arrow-right'></span>"
+           data-control-prev="<span class='mif-arrow-left'></span>"
+           data-auto-start="true"
+           data-period="3000"
+           data-duration="1000"
+           class="bg-black"
+           data-height="900">
+        <div class="slide">
+          <div class="row flex-align-center h-100">
+            <div class="cell-md-4 text-center">
+              <img src="images/daggy_logo.svg" alt="<%= data.general.title %>" class="img-fluid">
+            </div>
+            <div class="cell-md-8">
+              <h1>Daggy is utility for developers, QA, administrators and other IT specialist</h1>
+              <p class="mt-4 mb-4">With Daggy you can:</p>
+              <ul>
+                <li>
+                  Debug your microservices
+                </li>
+                <li>
+                  Collect any data from remote and local hosts
+                </li>
+                <li>
+                  Sniff any data from your network
+                </li>
+              </ul>
+              <a class="button fg-white" href="ttps://docs.daggy.dev/">Read more</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="row flex-align-center h-100">
+            <div class="cell-md-6 text-center">
+              <img src="images/daggy_example.png" alt="<%= data.general.images.daggy_source_example %>" class="img-fluid">
+            </div>
+            <div class="cell-md-6">
+              <h1>Daggy is simple and useful</h1>
+              <p class="mt-4 mb-4">If you know about yaml/json and bash/ssh, you know how to use Daggy</p>
+              <p class="mt-4 mb-4">Create data sources file and aggregate data from multiple servers at runtime</p>
+              <a class="button fg-white" href="https://docs.daggy.dev/getting-started">Getting started</a>
+            </div>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="row flex-align-center h-100">
+            <div class="cell-md-8 offset-2">
+              <h1>Daggy is free, open source and server less solution</h1>
+              <p class="mt-4 mb-4">Just try it!</p>
+              <%= partial 'partials/install_button' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-left pt-10 pb-20" id="features">
+    <div class="container text-center">
+      <div class="row mt-12">
+        <div class="cell-md-4 mt-4">
+          <div><span class="mif-server mif-8x fg-accent"></span></div>
+          <h4 class="fg-white mt-4">Server less</h4>
+          <p>
+            Installation is not required on remote servers
+          </p>
+        </div>
+        <div class="cell-md-4 mt-4">
+          <div><span class="mif-laptop mif-8x fg-accent"></span></div>
+          <h4 class="fg-white mt-4">Cross platform</h4>
+          <p>
+            Run Daggy on Windows, MacOS or Linux
+          </p>
+        </div>
+        <div class="cell-md-4 mt-4">
+          <div><span class="mif-linux mif-8x fg-accent"></span></div>
+          <h4 class="fg-white mt-4">Open source</h4>
+          <p>
+            Daggy is <a href="https://github.com/synacker/daggy" class="fg-accent">open source</a> solution under MIT
+            license.
+          </p>
+        </div>
+      </div>
 
-  <p class="fg-white text-small">v<span class="version-number text-bold">1.1.3</span></p>
-  <div>
-    <%= partial 'partials/install_button' %>
-  </div>
-</div>
-<div class="container-fluid text-left pt-10 pb-20">
-  <div class="container">
-    <div data-role="carousel"
-         data-cls-controls="fg-white"
-         data-cls-bullet="bullet-big bg-black"
-         data-bullets-style="circle"
-         data-cls-bullet-on="bg-control drop-shadow"
-         data-cls-slides="rounded"
-         data-control-next="<span class='mif-arrow-right'></span>"
-         data-control-prev="<span class='mif-arrow-left'></span>"
-         data-auto-start="true"
-         data-period="3000"
-         data-duration="1000"
-         class="bg-black"
-         data-height="900">
-      <div class="slide">
-        <div class="row flex-align-center h-100">
-          <div class="cell-md-4 text-center">
-            <img src="images/daggy_logo.svg" alt="<%= data.general.title %>" class="img-fluid">
-          </div>
-          <div class="cell-md-8">
-            <h1>Daggy is utility for developers, QA, administrators and other IT specialist</h1>
-            <p class="mt-4 mb-4">With Daggy you can:</p>
-            <ul>
-              <li>
-                Debug your microservices
-              </li>
-              <li>
-                Collect any data from remote and local hosts
-              </li>
-              <li>
-                Sniff any data from your network
-              </li>
-            </ul>
-            <a class="button fg-white" href="ttps://docs.daggy.dev/">Read more</a>
-          </div>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="row flex-align-center h-100">
-          <div class="cell-md-6 text-center">
-            <img src="images/daggy_example.png" alt="<%= data.general.images.daggy_source_example %>" class="img-fluid">
-          </div>
-          <div class="cell-md-6">
-            <h1>Daggy is simple and useful</h1>
-            <p class="mt-4 mb-4">If you know about yaml/json and bash/ssh, you know how to use Daggy</p>
-            <p class="mt-4 mb-4">Create data sources file and aggregate data from multiple servers at runtime</p>
-            <a class="button fg-white" href="https://docs.daggy.dev/getting-started">Getting started</a>
-          </div>
-        </div>
-      </div>
-      <div class="slide">
-        <div class="row flex-align-center h-100">
-          <div class="cell-md-8 offset-2">
-            <h1>Daggy is free, open source and server less solution</h1>
-            <p class="mt-4 mb-4">Just try it!</p>
-            <%= partial 'partials/install_button' %>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
-</div>
-<div class="container-fluid text-left pt-10 pb-20" id="features">
-  <div class="container text-center">
-    <div class="row mt-12">
-      <div class="cell-md-4 mt-4">
-        <div><span class="mif-server mif-8x fg-accent"></span></div>
-        <h4 class="fg-white mt-4">Server less</h4>
-        <p>
-          Installation is not required on remote servers
-        </p>
-      </div>
-      <div class="cell-md-4 mt-4">
-        <div><span class="mif-laptop mif-8x fg-accent"></span></div>
-        <h4 class="fg-white mt-4">Cross platform</h4>
-        <p>
-          Run Daggy on Windows, MacOS or Linux
-        </p>
-      </div>
-      <div class="cell-md-4 mt-4">
-        <div><span class="mif-linux mif-8x fg-accent"></span></div>
-        <h4 class="fg-white mt-4">Open source</h4>
-        <p>
-          Daggy is <a href="https://github.com/synacker/daggy" class="fg-accent">open source</a> solution under MIT license.
-        </p>
+  <div class="container-fluid text-center pt-10 pb-20" id="howitworks">
+    <div class="container mt-12">
+      <div class="img-container bg-black" data-popover-text="How Daggy works">
+        <img src="images/daggy_scheme.svg" alt="<%= data.general.images.how_daggy_works %>">
       </div>
     </div>
-
-  </div>
-</div>
-<div class="container-fluid text-center pt-10 pb-20" id="howitworks">
-  <div class="container mt-12">
-    <div class="img-container bg-black" data-popover-text="How Daggy works">
-      <img src="images/daggy_scheme.svg" alt="<%= data.general.images.how_daggy_works %>">
+    <div class="mt-5">
+      <%= partial 'partials/install_button' %>
     </div>
   </div>
-  <div class="mt-5">
-    <%= partial 'partials/install_button' %>
-  </div>
-</div>
