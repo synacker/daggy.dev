@@ -3,7 +3,7 @@
 new ClipboardJS('.copy-button');
 
 
-let OSName = 'unknown';
+var OSName = 'unknown';
 if (navigator.appVersion.indexOf("Win") != -1) OSName = 'windows';
 if (navigator.appVersion.indexOf("Mac") != -1) OSName = 'macos';
 if (navigator.appVersion.indexOf("X11") != -1) OSName = 'linux';
