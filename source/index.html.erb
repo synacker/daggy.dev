@@ -63,6 +63,27 @@ title: About
             </div>
           </div>
           <div class="frame">
+            <div class="heading">Debian/Ubuntu</div>
+            <div class="content p-5">
+              <button class="button square rounded copy-button" data-clipboard-target="#deb_install" title="Copy">
+                <span class="mif-copy"></span>
+              </button>
+              <div id="deb_install" class="text-left">
+                <code class="bg-black">
+                  sudo add-apt-repository ppa:synacker/daggy
+                </code>
+                <br>
+                <code class="bg-black">
+                  sudo apt-get update
+                </code>
+                <br>
+                <code class="bg-black">
+                  sudo apt-get install daggy
+                </code>
+              </div>
+            </div>
+          </div>
+          <div class="frame">
             <div class="heading">Arch Linux</div>
             <div class="content p-5">
               <button class="button square rounded copy-button" data-clipboard-target="#arch_install" title="Copy">
