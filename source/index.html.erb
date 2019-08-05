@@ -68,7 +68,8 @@ title: About
               <button class="button square rounded copy-button" data-clipboard-target="#deb_install" title="Copy">
                 <span class="mif-copy"></span>
               </button>
-              <div id="deb_install" class="text-left"><code class="bg-black">sudo add-apt-repository ppa:synacker/daggy</code>
+              <div id="deb_install" class="text-left">
+                <code class="bg-black">sudo add-apt-repository ppa:synacker/daggy</code>
                 <br>
                 <code class="bg-black">sudo apt-get update</code>
                 <br>
@@ -110,70 +111,80 @@ title: About
       </div>
     </div>
   </div>
-  <div class="container-fluid text-left pt-10 pb-20" id="demo">
+  <div class="container-fluid text-center pt-10 pb-20" id="demo">
+    <div class="h1"><span class="reduce-1 enlarge-1-md">Screencast Demo</span></div>
     <div class="embed-container size-16x9">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/tweXV0dvSbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  </div>
-  <div class="container-fluid text-left pt-10 pb-20" id="features">
-    <div class="container text-center">
-      <div class="row mt-12">
-        <div class="cell-md-4 mt-4">
-          <div><span class="mif-file-code mif-8x fg-accent"></span></div>
-          <h4 class="fg-white mt-4 text-bold">Data Aggregation Config</h4>
-          <p>
-            <a href="https://docs.daggy.dev/data-aggregation-config">Create once, use many</a>
-          </p>
-        </div>
-        <div class="cell-md-4 mt-4">
-          <div><span class="mif-files-empty mif-8x fg-accent"></span></div>
-          <h4 class="fg-white mt-4 text-bold">Data Aggregation Snippets</h4>
-          <p>
-            Take ready <a href="https://docs.daggy.dev/data-aggregation-snippets"><b>Data Aggregation Snippets</b></a> or <a href="https://docs.daggy.dev/data-aggregation-snippets">create own</a>
-          </p>
-        </div>
-        <div class="cell-md-4 mt-4 ">
-          <div><span class="mif-flow-line mif-8x fg-accent"></span></div>
-          <h4 class="fg-white mt-4 text-bold">Data Aggregation Streams</h4>
-          <p>
-            <b>Data Aggregation Snippets</b> are streams at runtime
-          </p>
-        </div>
+</div>
+<div class="container-fluid text-left pt-10 pb-20" id="features">
+  <div class="container text-center">
+    <div class="h1"><span class="reduce-1 enlarge-1-md">Features</span></div>
+    <div class="row mt-12">
+      <div class="cell-md-4 mt-4">
+        <div><span class="mif-file-code mif-8x fg-accent"></span></div>
+        <h4 class="fg-white mt-4 text-bold">Data Aggregation Config</h4>
+        <p>
+          <a href="https://docs.daggy.dev/data-aggregation-config">Create once, use many</a>
+        </p>
       </div>
-      <div class="row mt-12">
-        <div class="cell-md-4 mt-4">
-          <div><span class="mif-flow-parallel mif-8x fg-accent"></span></div>
-          <h4 class="fg-white mt-4 text-bold">Parallel Execution</h4>
-          <p>
-            All <b>Data Aggregation Snippets</b> are run and streams in parallel and simultaneously
-          </p>
-        </div>
-        <div class="cell-md-4 mt-4">
-          <div><span class="mif-database mif-8x fg-accent"></span></div>
-          <h4 class="fg-white mt-4 text-bold">Data Aggregation Storage</h4>
-          <p>
-            Each <b>Data Aggregation Session</b> stored in separate local folder.
-            Each <b>Data Aggregation Snippet</b> store in separate file.
-          </p>
-        </div>
-        <div class="cell-md-4 mt-4">
-          <div><span class="mif-server mif-8x fg-accent"></span></div>
-          <h4 class="fg-white mt-4 text-bold">Local and Remote Data Aggregation</h4>
-          <p>
-            Aggregate data from local or via ssh connection
-          </p>
-        </div>
+      <div class="cell-md-4 mt-4">
+        <div><span class="mif-files-empty mif-8x fg-accent"></span></div>
+        <h4 class="fg-white mt-4 text-bold">Data Aggregation Snippets</h4>
+        <p>
+          Take ready <a href="https://docs.daggy.dev/data-aggregation-snippets"><b>Data Aggregation Snippets</b></a> or
+          <a href="https://docs.daggy.dev/data-aggregation-snippets">create own</a>
+        </p>
+      </div>
+      <div class="cell-md-4 mt-4 ">
+        <div><span class="mif-flow-line mif-8x fg-accent"></span></div>
+        <h4 class="fg-white mt-4 text-bold">Data Aggregation Streams</h4>
+        <p>
+          <b>Data Aggregation Snippets</b> are streams at runtime
+        </p>
       </div>
     </div>
-  </div>
-  <div class="container-fluid text-center pt-10 pb-20" id="howitworks">
-    <div class="container mt-12">
-      <div class="img-container bg-black" data-popover-text="How Daggy works">
-        <img src="images/daggy_scheme.svg" alt="<%= data.general.images.how_daggy_works %>">
+    <div class="row mt-12">
+      <div class="cell-md-4 mt-4">
+        <div><span class="mif-flow-parallel mif-8x fg-accent"></span></div>
+        <h4 class="fg-white mt-4 text-bold">Parallel Execution</h4>
+        <p>
+          All <b>Data Aggregation Snippets</b> are run and streams in parallel and simultaneously
+        </p>
+      </div>
+      <div class="cell-md-4 mt-4">
+        <div><span class="mif-database mif-8x fg-accent"></span></div>
+        <h4 class="fg-white mt-4 text-bold">Data Aggregation Storage</h4>
+        <p>
+          Each <b>Data Aggregation Session</b> stored in separate local folder.
+          Each <b>Data Aggregation Snippet</b> store in separate file.
+        </p>
+      </div>
+      <div class="cell-md-4 mt-4">
+        <div><span class="mif-server mif-8x fg-accent"></span></div>
+        <h4 class="fg-white mt-4 text-bold">Local and Remote Data Aggregation</h4>
+        <p>
+          Aggregate data from local or via ssh connection
+        </p>
       </div>
     </div>
-    <div class="mt-5">
-      <%= partial 'partials/install_button' %>
+  </div>
+</div>
+<div class="container-fluid text-center pt-10 pb-20" id="howitworks">
+  <div class="h1"><span class="reduce-1 enlarge-1-md">Work Schema</span></div>
+  <div class="container mt-12">
+    <div class="img-container bg-black" data-popover-text="How Daggy works">
+      <a href="https://docs.daggy.dev/how-it-works"><img src="images/daggy_scheme.svg" alt="<%= data.general.images.how_daggy_works %>"></a>
     </div>
   </div>
+  <div class="mt-5">
+    <%= partial 'partials/install_button' %>
+  </div>
+</div>
+<div class="container-fluid text-center pt-10 pb-20" id="thanks">
+  <div class="h1"><span class="reduce-1 enlarge-1-md">Special Thanks To</span></div>
+  <div class="container mt-12">
+      <a href="https://www.jetbrains.com/?from=daggy"><img id="jetbrains_logo" src="images/jetbrains-logo.svg" alt="JetBrains"></a>
+  </div>
+</div>
