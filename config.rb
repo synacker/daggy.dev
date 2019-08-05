@@ -78,4 +78,9 @@ helpers do
   def last_update_time(file)
     Time.parse `git log -1 --format=%cd #{file} 2>/dev/null`
   end
+
+  def social_image
+    current_page.data.social_logo || 'https://daggy.dev/images/daggy_social.png'
+  end
+
 end

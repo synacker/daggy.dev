@@ -7,23 +7,23 @@
   <meta name="twitter:site" content="@synacker">
   <meta name="twitter:creator" content="@synacker">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="<%= data.general.title %>">
-  <meta name="twitter:description" content="<%= data.general.description %>">
-  <meta name="twitter:image" content="https://daggy.dev/images/daggy_social.png">
+  <meta name="twitter:title" content="<%= current_page.data.title %>">
+  <meta name="twitter:description" content="<%= current_page.data.description %>">
+  <meta name="twitter:image" content="<%= social_image %>">
 
   <meta property="og:url" content="https://daggy.dev/index.html">
-  <meta property="og:title" content="<%= data.general.title %>">
-  <meta property="og:description" content="<%= data.general.description %>">
+  <meta property="og:title" content="<%= current_page.data.title %>">
+  <meta property="og:description" content="<%= current_page.data.description %>">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://daggy.dev/images/daggy_social.png">
-  <meta property="og:image:secure_url" content="https://daggy.dev/images/daggy_social.png">
+  <meta property="og:image" content="<%= social_image %>">
+  <meta property="og:image:secure_url" content="<%= social_image %>">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1280">
   <meta property="og:image:height" content="640">
 
   <meta name="author" content="synacker">
-  <meta name="description" content="<%= data.general.description %>">
-  <meta name="keywords" content="data aggregation, command line, software, daggy software, open source, server-less, serverless, free, cross-platform, crossplatform, ssh, bash, utility, administration, debug, developing, network, microservice">
+  <meta name="description" content="<%= current_page.data.description %>">
+  <meta name="keywords" content="<%= current_page.data.tags %>">
 
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -90,33 +90,7 @@
 
   <% end %>
 
-  <script type="application/ld+json">
-      {
-      "@context": "http://schema.org/",
-      "@type": "Organization",
-      "url": "https://daggy.dev/",
-      "name": "Daggy - Data Aggregation Utility",
-      "logo": "https://daggy.dev/daggy_logo.png",
-      "sameAs": [
-          "https://github.com/synacker/daggy",
-          "https://twitter.com/synacker"
-        ]
-      }
-
-
-  </script>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Daggy",
-    "operatingSystem": "Windows, MacOS, Linux",
-    "applicationCategory": "https://schema.org/UtilitiesApplication"
-  }
-
-  </script>
-
+  <%= current_page.data.data_structures %>
 
 </head>
 <body>
