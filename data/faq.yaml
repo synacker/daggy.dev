@@ -1,6 +1,6 @@
 - name: Which data types I can aggregate with Daggy?
   answer: >
-    The data types are not limited, because Daggy not analyze data, it aggregate data.
+    The data types are not limited, because Daggy not analyze data, it aggregate data.<br>
     You can set <i>extension</i> in <a href="https://docs.daggy.dev/data-aggregation-snippets">Data Aggregation Snippet</a>, for example, <b>pcap</b>, and analyze it with Wireshark
 
 - name: Can I sniff network traffic with Daggy?
