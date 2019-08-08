@@ -1,0 +1,42 @@
+---
+title: FAQ|Daggy
+description: Most frequently asked questions about Daggy
+tags: daggy, logstash, ansible, faq, wireshark, serverless, logging, data aggregation, logs
+---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+<% data.faq.each do |faq| %>
+  {
+    "@type": "Question",
+    "name": "<%= faq.name %>",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "<%= faq.answer %>"
+    }
+  },
+<% end %>
+  ]
+}
+</script>
+
+
+<div class="container-fluid text-lef" id="features">
+  <div class="container">
+    <div class="row text-center pb-5">
+      <h1 class="cell-12"><%= current_page.data.description %></h1>
+    </div>
+    <div data-role="accordion" data-one-frame="true" data-show-active="true">
+    <% data.faq.each do |faq| %>
+        <div class="frame">
+          <div class="heading"><%= faq.name %></div>
+          <div class="content">
+            <p class="p-5"><%= faq.answer %></p>
+          </div>
+        </div>
+    <% end %>
+    </div>
+  </div>
+</div>
