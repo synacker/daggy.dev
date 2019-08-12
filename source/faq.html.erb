@@ -8,7 +8,7 @@ tags: daggy, logstash, ansible, faq, wireshark, serverless, logging, data aggreg
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-<% data.faq.each do |faq| %>
+<% data.faq.each_with_index do |faq, index| %>
   {
     "@type": "Question",
     "name": "<%= faq.name %>",
@@ -16,7 +16,7 @@ tags: daggy, logstash, ansible, faq, wireshark, serverless, logging, data aggreg
       "@type": "Answer",
       "text": "<%= faq.answer %>"
     }
-  },
+  }<%= ',' if index != (data.faq.size - 1) %>
 <% end %>
   ]
 }
