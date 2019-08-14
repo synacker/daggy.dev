@@ -6,14 +6,23 @@
 - name: Can I sniff network traffic with Daggy?
   answer: Yes, you can! For example, see next <a href='https://docs.daggy.dev/data-aggregation-snippets#dump-entire-network-traffic-for-remote-host'>Data Aggregation Snippet</a>
 
-- name: Data Aggregation Config looks like ansible playbook with stripped down functionality. Why should I use Daggy?
+- name: Can Daggy replace Ansible?
   answer: >
+    Data Aggregation Config looks like ansible playbook with stripped down functionality.<br>
     The main goal of Ansible is deploying applications.<br>
     The main goal of Daggy is Data Aggregation.<br>
     Therefore Daggy provides simple way for simultaneous run multiple commands on multiple servers with runtime commands output streaming into separate files.
 
-- name: The aggregation of logs looks like Logstash. Can Daggy swap logstash?
+- name: Can Daggy replace logstash?
   answer: >
     Yes, you can aggregate logs from your network with Daggy.<br>
     Just, use <b>Data Aggregation Snippet</b> <a href='https://docs.daggy.dev/data-aggregation-snippets#journald-logs-streaming'>like this</a><br>
     In contrast of Logstash, the solution based on Daggy will be serverless.
+
+- name: How Daggy does compare with other ssh multiplexers, like sslh, taktuk and others?
+  answer: >
+    1. Daggy can run commands on localhost without ssh<br>
+    2. Daggy can run different sets of commands on different sets servers (taktuk, for example, can run only one command on set of servers)<br>
+    3. Daggy has <a href='https://github.com/synacker/daggy/blob/master/docs/.gitbook/assets/simple_multiple_servers.yaml'>human readable config</a><br>
+    4. Daggy streams output of commands to your local folder at runtime by default - separate file for each command.<br>
+    5. Daggy is crossplatform. It means, that one data sources config can be run from multiple types of hosts (Windows, MacOS, Linux).<br>
