@@ -37,10 +37,10 @@ data_structures: >
   <img src="images/daggy_logo.svg" height="200px">
   <div class="display4 fg-white"><span class="reduce-3 enlarge-3-md">DAGGY</span></div>
 
-  <h4 class="text-center fg-white text-upper text-light">Data Aggregation Utility<span class="d-none-md1"><br></span>
+  <h4 class="text-center fg-white text-upper text-light"><%= current_page.data.title %><span class="d-none-md1"><br></span>
   </h4>
-  <h5><%= data.general.description %></h5>
-  <p class="fg-white">Download and install v<span class="version-number text-bold">2.0.0</span></p>
+  <h5>Data aggregation and streaming</h5>
+  <p class="fg-white">Download and install v<span class="version-number text-bold">2.0.1</span></p>
   <div class="d-flex flex-justify-center">
     <ul id="install_buttons" class="app-bar-present pos-absolute no-border bg-black cell-6 offset-3"
         data-fixed-tabs="true"
@@ -60,7 +60,7 @@ data_structures: >
       <div class="fg-white" id="install_windows">
         <ul id="windows_install" class="group-list">
           <li>
-            <a href="https://github.com/synacker/daggy/releases/download/2.0.0/daggy-win64-2.0.0.0.exe" class="command-button fg-white" download>
+            <a href="https://github.com/synacker/daggy/releases/download/2.0.1/daggy-win64-2.0.1.0.exe" class="command-button fg-white" download>
               <span class="mif-download icon"></span>
               <span class="caption">
                   Daggy Installer
@@ -69,7 +69,7 @@ data_structures: >
             </a>
           </li>
           <li>
-            <a href="https://github.com/synacker/daggy/releases/download/2.0.0/daggy-win64-2.0.0.0.zip" class="command-button fg-white" download>
+            <a href="https://github.com/synacker/daggy/releases/download/2.0.1/daggy-win64-2.0.1.0.zip" class="command-button fg-white" download>
               <span class="mif-download icon"></span>
               <span class="caption">
                   Daggy Portable
@@ -79,61 +79,65 @@ data_structures: >
           </li>
         </ul>
       </div>
-      <div class="fg-white" id="install_linux">
-        <ul id="windows_install" class="group-list">
-          <li>
-            <a href="https://github.com/synacker/daggy/releases/download/2.0.0/daggy-linux64-2.0.0.0.deb" class="command-button fg-white" download>
-              <span class="mif-download icon"></span>
-              <span class="caption">
+      <div class="fg-white grid" id="install_linux">
+        <div class="row">
+          <ul id="windows_install" class="group-list cell">
+            <li class="border-none">
+              <a href="https://github.com/synacker/daggy/releases/download/2.0.1/daggy-linux64-2.0.1.0.deb" class="command-button fg-white" download>
+                <span class="mif-download icon"></span>
+                <span class="caption">
                   DEB
                   <small>debian package</small>
                 </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/synacker/daggy/releases/download/2.0.0/daggy-linux64-2.0.0.0.rpm" class="command-button fg-white" download>
-            <span class="mif-download icon"></span>
-            <span class="caption">
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/synacker/daggy/releases/download/2.0.1/daggy-linux64-2.0.1.0.rpm" class="command-button fg-white" download>
+                <span class="mif-download icon"></span>
+                <span class="caption">
                   RPM
                   <small>rpm package</small>
                 </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/synacker/daggy/releases/download/2.0.0/daggy-linux64-2.0.0.0.zip" class="command-button fg-white" download>
-              <span class="mif-download icon"></span>
-              <span class="caption">
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/synacker/daggy/releases/download/2.0.1/daggy-linux64-2.0.1.0.zip" class="command-button fg-white" download>
+                <span class="mif-download icon"></span>
+                <span class="caption">
                   Portable
                   <small>portable package</small>
                 </span>
-            </a>
-          </li>
-        </ul>
-        <div data-role="accordion" data-one-frame="true" data-show-active="true">
-          <div class="frame">
-            <div class="heading">Fedora 30/31/32</div>
-            <div class="content p-5">
-              <button class="button square rounded copy-button" data-clipboard-target="#fedora_install" title="Copy">
-                <span class="mif-copy"></span>
-              </button>
-              <code id="fedora_install" class="bg-black">
-                sudo dnf install daggy daggy-devel
-              </code>
+              </a>
+            </li>
+          </ul>
+          <div class="cell" data-one-frame="true" data-show-active="true">
+            <div class="frame">
+              <div class="heading">Fedora 30/31/32</div>
+              <div class="content p-5">
+                <button class="button square rounded copy-button" data-clipboard-target="#fedora_install" title="Copy">
+                  <span class="mif-copy"></span>
+                </button>
+                <code id="fedora_install" class="bg-black">
+                  sudo dnf install daggy daggy-devel
+                </code>
+              </div>
             </div>
-          </div>
-          <div class="frame">
-            <div class="heading">Build from source</div>
-            <div class="content p-5">
-              <a href="https://docs.daggy.dev/getting-started#build-from-source" class="command-button fg-white">
-                <span class="mif-help icon"></span>
-                <span class="caption">
+            <div class="frame">
+              <div class="heading">Build from source</div>
+              <div class="content p-5">
+                <a href="https://docs.daggy.dev/getting-started#build-from-source" class="command-button fg-white">
+                  <span class="mif-help icon"></span>
+                  <span class="caption">
                   Read build instruction
                   <small>Compile Daggy from source</small>
                 </span>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
+
       </div>
       <div class="fg-white cell-12" id="install_macos">
         <button class="button square rounded copy-button" data-clipboard-target="#brew_install" title="Copy">
