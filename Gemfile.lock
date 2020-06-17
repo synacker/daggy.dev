@@ -120,8 +120,8 @@ PLATFORMS
 
 DEPENDENCIES
   execjs
-  middleman (~> 4.2)
-  middleman-autoprefixer (~> 2.7)
+  middleman
+  middleman-autoprefixer
   middleman-favicon-maker
   middleman-livereload
   mini_racer

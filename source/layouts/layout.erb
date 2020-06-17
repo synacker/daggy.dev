@@ -95,8 +95,8 @@
 </head>
 <body>
 <div class="container-fluid pos-fixed fixed-top z-top">
-  <header class="app-bar container bg-black panel fg-control pos-relative" data-role="appbar" data-expand-point="md">
-    <a href="index.html" class="brand no-hover">
+  <header class="app-bar container bg-transparent fg-white pos-relative" data-role="appbar" data-expand-point="md"><button type="button" class="hamburger menu-down hidden"><span class="line"></span><span class="line"></span><span class="line"></span></button>
+    <a href="index.html" class="brand fg-white no-hover text-bold">
       <span>DAGGY</span>
     </a>
     <ul class="app-bar-menu ml-auto text-upper collapsed" style="">
@@ -139,8 +139,7 @@
 
 <%= yield %>
 
-<script src="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js"></script>
+<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
 <%= javascript_include_tag 'site' %>
 
 </body>
