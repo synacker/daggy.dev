@@ -1,7 +1,7 @@
 ---
-title: Daggy - Data Aggregation Utility
-description: Open source, free, cross-platform, server-less and useful utility for remote or local data aggregation and streaming
-tags: data aggregation, data aggregation config, data aggregation snippets, runtime, data streaming, command line, open source, free, server-less, software, tool, utility, application
+title: Daggy - Data Aggregation Utility and C/C++ developer library for data streams catching
+description: Main goals are server-less, cross-platform, simplicity and ease-of-use. It can be helpful for developers, QA, DevOps and engineers for debug, analyze and control any data streams, including requests and responses, in distributed network systems, for example, based on micro-service architecture.
+tags: streaming qt monitoring process stream-processing extensible serverless-framework aggregation ssh2 cross-platform-app cross-platform-development
 data_structures: >
   <script type="application/ld+json">
 
@@ -40,115 +40,14 @@ data_structures: >
   <h4 class="text-center fg-white text-upper text-bold"><%= current_page.data.title %><span class="d-none-md1"><br></span>
   </h4>
   <h5>Data aggregation and streaming</h5>
-  <p class="fg-white">Download and install v<span class="version-number text-bold">2.0.2</span></p>
-  <div class="d-flex flex-justify-center">
-    <ul id="install_buttons" class="app-bar-present pos-absolute no-border bg-black cell-6 offset-3"
-        data-fixed-tabs="true"
-        data-role="materialtabs"
-        data-cls-marker="bg-transparent">
-      <li id="windows_tab">
-        <a class="bg-black" href="#install_windows"><span class="mif-windows mif-3x fg-accent"></span></a>
-      </li>
-      <li id="linux_tab">
-        <a class="bg-black" href="#install_linux"><span class="mif-linux mif-3x fg-accent"></span></a>
-      </li>
-      <li id="macos_tab">
-        <a class="bg-black" href="#install_macos"><span class="mif-apple mif-3x fg-accent"></span></a>
-      </li>
-    </ul>
-    <div id="install_content">
-      <div class="fg-white" id="install_windows">
-        <ul id="windows_install" class="group-list">
-          <li>
-            <a href="https://github.com/synacker/daggy/releases/download/2.0.2/daggy-win64-2.0.2.0.exe" class="command-button fg-white" download>
-              <span class="mif-download icon"></span>
-              <span class="caption">
-                  Daggy Installer
-                  <small>Windows x64</small>
-                </span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/synacker/daggy/releases/download/2.0.2/daggy-win64-2.0.2.0.zip" class="command-button fg-white" download>
-              <span class="mif-download icon"></span>
-              <span class="caption">
-                  Daggy Portable
-                  <small>Windows x64</small>
-                </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="fg-white grid" id="install_linux">
-        <div class="row">
-          <ul id="windows_install" class="group-list cell">
-            <li class="border-none">
-              <a href="https://github.com/synacker/daggy/releases/download/2.0.2/daggy-linux64-2.0.2.0.deb" class="command-button fg-white" download>
-                <span class="mif-download icon"></span>
-                <span class="caption">
-                  DEB
-                  <small>debian package</small>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/synacker/daggy/releases/download/2.0.2/daggy-linux64-2.0.2.0.rpm" class="command-button fg-white" download>
-                <span class="mif-download icon"></span>
-                <span class="caption">
-                  RPM
-                  <small>rpm package</small>
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/synacker/daggy/releases/download/2.0.2/daggy-linux64-2.0.2.0.zip" class="command-button fg-white" download>
-                <span class="mif-download icon"></span>
-                <span class="caption">
-                  Portable
-                  <small>portable package</small>
-                </span>
-              </a>
-            </li>
-          </ul>
-          <div class="cell" data-one-frame="true" data-show-active="true">
-            <div class="frame">
-              <div class="heading">Fedora</div>
-              <div class="content p-5">
-                <button class="button square rounded copy-button" data-clipboard-target="#fedora_install" title="Copy">
-                  <span class="mif-copy"></span>
-                </button>
-                <code id="fedora_install" class="bg-black">
-                  sudo dnf install daggy daggy-devel
-                </code>
-              </div>
-            </div>
-            <div class="frame">
-              <div class="heading">Build from source</div>
-              <div class="content p-5">
-                <a href="https://docs.daggy.dev/getting-started#build-from-source" class="command-button fg-white">
-                  <span class="mif-help icon"></span>
-                  <span class="caption">
-                  Read build instruction
-                  <small>Compile Daggy from source</small>
-                </span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-      </div>
-      <div class="fg-white cell-12" id="install_macos">
-        <button class="button square rounded copy-button" data-clipboard-target="#brew_install" title="Copy">
-          <span class="mif-copy"></span>
-        </button>
-        <code id="brew_install" class="bg-black">
-          brew install https://raw.githubusercontent.com/synacker/daggy_homebrew/master/daggy.rb
-        </code>
-      </div>
-    </div>
+  <div class="d-flex flex-justify-center flex-align-center text-small">
+    <%= partial 'partials/install_button' %>
   </div>
+  
+  <div class="d-flex flex-justify-center flex-align-center text-small">
+    <a href="https://github.com/synacker/daggy" class="enlarge-4x m-1 fg-accent no-decor fg-green-hover transition" target="_blank"><span class="mif-github mif-5x"></span></a>
+  </div>
+
   <div class="container-fluid text-center pt-10 pb-20" id="demo">
     <div class="h1"><span class="reduce-1 enlarge-1-md text-bold">Screencast Demo</span></div>
     <div class="embed-container size-16x9">
@@ -218,11 +117,5 @@ data_structures: >
   </div>
   <div class="mt-5">
     <%= partial 'partials/install_button' %>
-  </div>
-</div>
-<div class="container-fluid text-center pt-10 pb-20" id="thanks">
-  <div class="h1"><span class="reduce-1 enlarge-1-md text-bold">Special Thanks To</span></div>
-  <div class="container mt-12">
-      <a href="https://www.jetbrains.com/?from=daggy"><img id="jetbrains_logo" src="images/jetbrains-logo.svg" alt="JetBrains"></a>
   </div>
 </div>
