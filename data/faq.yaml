@@ -1,3 +1,20 @@
+- name: I do not totally understand which problems it solves? Like, do you have an real world example?
+  answer: >
+    To say you the truth - I still not understand how to describe this in short terms. <br>
+    Well, let me say how I get idea about this project with my problem: <br>
+    I worked under SIP server. <br>
+    The simple SIP call were transfered approximetly 20 microservicies <br>
+    From time to time, I was needed resolve any bugs with SIP calls. <br>
+    The problem was how to aggregate dumps, logs, configurations from 20 microservicies during the call? We had the ELK, but this don't have the all information, that I need (for example, tcp dumps). <br>
+    I did the first version of Daggy that provides me the next solution: <br>
+      1. I did <a href="https://docs.daggy.dev/#getting-started-data-aggregation-and-streaming-with-daggy-console-application">sources config</a> where I decribed all microservircies with any data streams and configs, that I intrested <br>
+      2. I run the Daggy with this config <br>
+      3. I did the SIP call <br>
+      4. I stop the Daggy <br>
+      5. I had all information about the call on my localhost - each stream were saved in separate file. <br>
+    Hope, this example will help you understand, which problem I solved with Daggy ) <br>
+    Btw, Daggy also streaming at runtime - it means that files are writing as data arrives. Moreever, in release 2.1 the C++/C library for streams catching were added
+
 - name: Which data types I can aggregate with Daggy?
   answer: >
     The data types are not limited, because Daggy not analyze data, it aggregate data.<br>
