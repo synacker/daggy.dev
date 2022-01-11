@@ -1,7 +1,7 @@
 - name: What Daggy do?
   id: what_faq
   answer: >
-    Daggy run local or remote processes at the same time, simultaneously read output from processes and stream and aggregate them under once session
+    Daggy run local or remote processes at the same time, simultaneously read output from processes, stream and aggregate them under once session
 
 - name: I do not totally understand which problems it solves? <br> Like, do you have an real world example?
   id: problem_faq
