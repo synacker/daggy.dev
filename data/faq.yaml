@@ -1,4 +1,10 @@
+- name: What Daggy do?
+  id: what_faq
+  answer: >
+    Daggy run local or remote processes at the same time, simultaneously read output from processes, stream and aggregate them under once session
+
 - name: I do not totally understand which problems it solves? <br> Like, do you have an real world example?
+  id: problem_faq
   answer: >
     To say you the truth - I still not understand how to describe this in short terms. <br>
     Well, let me say how I get idea about this project with my problem.<br>
@@ -18,14 +24,17 @@
     Btw, Daggy also streaming at runtime - it means that files are writing as data arrives. Moreever, in release 2.1 the C++/C library for streams catching were added
 
 - name: Which data types I can aggregate with Daggy?
+  id: types_faq
   answer: >
     The data types are not limited, because Daggy not analyze data, it aggregate data.<br>
     You can set <i>extension</i> in <a href='https://docs.daggy.dev/data-aggregation-snippets'>Data Aggregation Snippet</a>, for example, <b>pcap</b>, and analyze it with Wireshark
 
 - name: Can I sniff network traffic with Daggy?
+  id: traffic_faq
   answer: Yes, you can! For example, see next <a href='https://docs.daggy.dev/data-aggregation-snippets#dump-entire-network-traffic-for-remote-host'>Data Aggregation Snippet</a>
 
 - name: Can Daggy replace Ansible?
+  id: ansible_faq
   answer: >
     Data Aggregation Config looks like ansible playbook with stripped down functionality.<br>
     The main goal of Ansible is deploying applications.<br>
@@ -33,12 +42,14 @@
     Therefore Daggy provides simple way for simultaneous run multiple commands on multiple servers with runtime commands output streaming into separate files.
 
 - name: Can Daggy replace logstash?
+  id: logstash_faq
   answer: >
     Yes, you can aggregate logs from your network with Daggy.<br>
     Just, use <b>Data Aggregation Snippet</b> <a href='https://docs.daggy.dev/data-aggregation-snippets#journald-logs-streaming'>like this</a><br>
     In contrast of Logstash, the solution based on Daggy will be serverless.
 
 - name: How Daggy does compare with other ssh multiplexers, like sslh, taktuk and others?
+  id: multiplexers_faq
   answer: >
     1. Daggy can run commands on localhost without ssh<br>
     2. Daggy can run different sets of commands on different sets servers (taktuk, for example, can run only one command on set of servers)<br>
