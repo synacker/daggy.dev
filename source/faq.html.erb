@@ -30,10 +30,10 @@ tags: daggy, logstash, ansible, faq, wireshark, serverless, logging, data aggreg
     </div>
     <div data-role="accordion" data-one-frame="true" data-show-active="true">
     <% data.faq.each do |faq| %>
-        <div class="frame">
-          <div class="heading h3"><%= faq.name %></div>
-          <div class="content">
-            <p class="h4"><%= faq.answer %></p>
+        <div class="pb-10" id="<%= faq.id %>">
+          <div class="h2 fg-accent text-bold"><span class="text-bold">Q:</span> <%= faq.name %></div>
+          <div class="p-1 text-bold">
+            <span class="text-bold">A:</span> <%= faq.answer %>
           </div>
         </div>
     <% end %>
