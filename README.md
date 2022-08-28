@@ -5,3 +5,9 @@ Based on [Middleman](https://middlemanapp.com) static pages generator.
 Ui based on [Metro UI](https://metroui.org.ua/)
 
 Deploy to domain based on [Netlify](https://netlify.com) service.
+
+# How to run
+````bash
+bundle install
+
+````
